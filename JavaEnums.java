@@ -1,19 +1,7 @@
 /*
-An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables)
-To create an enum, use the enum keyword
-and separate the constants with a comma. Note that they should be in UPPERCASE letters
-
-Example
-enum Level {
-  LOW,
-  MEDIUM,
-  HIGH
-}
-
-You can access enum constants with the dot syntax:
-Level myVar = Level.MEDIUM;
+Enum in a Switch Statement
+Enums are often used in switch statements to check for corresponding values	
 */
-
 public class JavaEnums 
 {
   enum Level 
@@ -25,7 +13,18 @@ public class JavaEnums
 
   public static void main(String[] args) 
   {
-    Level myVar = Level.MEDIUM; 
-    System.out.println(myVar);
+  	Level myVar = Level.MEDIUM;
+    switch(myVar) 
+    {
+      case LOW:
+        System.out.println("Low level");
+        break;
+      case MEDIUM:
+         System.out.println("Medium level");
+        break;
+      case HIGH:
+        System.out.println("High level");
+        break;
+    }
   }
 }
