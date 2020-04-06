@@ -1,49 +1,34 @@
 /*
-	A HashMap, store items in "key/value" pairs
-
-	Example:
-	Create a HashMap object called capitalCities that will store String keys and String values
-
-	import java.util.HashMap; // import the HashMap class
-	HashMap<String, String> capitalCities = new HashMap<String, String>();
+	Loop Through a HashMap
+	Loop through the items of a HashMap with a for-each loop
+	Note: Use the keySet() method if you only want the 'keys', and use the values() method if you only want the 'values'
 */
-
 import java.util.HashMap;
 class JavaHashMap
 {
 	public static void main(String[] args) 
 	{
-		/*
-			Add Items
-			The HashMap class has many useful methods. For example, to add items to it, use the put() method
-		*/
 		HashMap<String, String> capitalCities = new HashMap<String, String>();
 	    // Add keys and values (Country, City) or can (Key, Value)
+		
 	    capitalCities.put("England", "London");
 	    capitalCities.put("Germany", "Berlin");
 	    capitalCities.put("India", "Mumbai");
+	    System.out.println("Without using for loop");
 	    System.out.println(capitalCities);
-
-	    /*
-			Access an Item
-			To access a value in the HashMap, use the get() method and refer to its key
-	    */
-		System.out.print("Accessing city of England ->");
-	    System.out.println(capitalCities.get("England"));
-
-	    /*
-			Remove an Item
-			To remove an item, use the remove() method and refer to the key
-	    */
-		capitalCities.remove("England");
-	    System.out.println("After Removing England: "+capitalCities);
-	    // To remove all items, use the clear() method
-	    // capitalCities.clear();
-
-	    /*
-			HashMap Size
-			To find out how many items there are, use the size method
-	    */
-		System.out.println("Size "+capitalCities.size());
+	    System.out.println();
+	    System.out.println("By using for loop and keySet() method");
+	    // By using keySet() method
+	    for (String i : capitalCities.keySet()) //Note: capitalCities is the object that we have made
+	    {
+          System.out.println(i);
+        }
+        System.out.println();
+        System.out.println("By using for loop and values() method");
+	    // By using values() method
+	    for (String i : capitalCities.values()) //Note: capitalCities is the object that we have made
+	    {
+	      System.out.println(i);
+	    }
 	}
 }
