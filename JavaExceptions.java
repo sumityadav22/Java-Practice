@@ -1,8 +1,10 @@
 /*
 	Exception handling is the process of responding to exceptions when a computer program runs
+
+	finally: The finally statement lets you execute code, after try...catch, regardless of the result
 */
 
-	
+
 class JavaExceptions
 {
 	public static void main(String[] args) 
@@ -18,5 +20,9 @@ class JavaExceptions
 	    {
 	      System.out.println("Something went wrong.");
 	    }
+	    finally
+	    {
+			System.out.println("The 'try catch' is finished.");
+		}
 	}
 }
